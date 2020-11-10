@@ -68,3 +68,37 @@
         console.log("Not Palindromes");
     }
 }
+
+//Prime Checking Of Number And Prime Checking Of It's Palindrome
+{
+    const prompt = require('prompt-sync')();
+
+    function isPrimeNumber(number) {
+        for (let indexValue = 2; indexValue < number; indexValue++) {
+            if (number % indexValue == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    function getPalindrome(number) {
+        let palindrome = 0;
+        while (number > 0) {
+            palindrome = palindrome * 10 + (number % 10);
+            number = Math.floor(number / 10);
+        }
+        return palindrome;
+    }
+
+    let number = parseInt(prompt("Enter a number "));
+    if (isPrimeNumber(number)) {
+        if (isPrimeNumber(getPalindrome(number))) {
+            console.log("Palindome also prime");
+        } else {
+            console.log("Palindrome NOT prime!!");
+        }
+    } else {
+        console.log("Number is NOT prime!!");
+    }
+}
