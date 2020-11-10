@@ -99,3 +99,30 @@
     }
     console.log(numInWords);
 }
+
+//Unit Conversions
+{
+    const prompt = require('prompt-sync')();
+    const INCH_IN_TERMS_OF_FEET = 1 / 12;
+    const FEET_IN_TERMS_OF_INCH = 1 / 12;
+    const FEET_IN_TERMS_OF_METER = 0.3048;
+    const METER_IN_TERMS_OF_FEET = 3.28084;
+
+    let value = parseFloat(prompt('Enter the value: '));
+    let unit = prompt('Enter the unit: ');
+    switch (unit) {
+        case 'Inch':
+            console.log("Value in Feet: " + value * INCH_IN_TERMS_OF_FEET);
+            break;
+        case 'Feet':
+            console.log("Value in Inches: " + value * FEET_IN_TERMS_OF_INCH);
+            console.log("Value in Meters: " + value * FEET_IN_TERMS_OF_METER);
+            break;
+        case 'Meter':
+            console.log("Value in Feet: " + value * METER_IN_TERMS_OF_FEET);
+            break;
+        default:
+            console.log("Invalid Unit!");
+            break;
+    }
+}
