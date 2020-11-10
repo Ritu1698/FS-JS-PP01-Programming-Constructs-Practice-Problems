@@ -14,3 +14,21 @@
     }
     console.log("Max Value is: " + maxValue + " Min Value is: " + minValue);
 }
+
+//Day check between March 20 - June 20
+{
+    const prompt = require('prompt-sync')();
+    let day = prompt('Enter day ');
+    let month = prompt('Enter month ');
+    let result = false;
+    if (month == 'March' && day >= 20) {
+        result = true;
+    }
+    if (month == 'April' || month == 'May') {
+        result = true;
+    }
+    if (month == 'June' && day <= 20) {
+        result = true;
+    }
+    console.log("Day in between? " + result);
+}
