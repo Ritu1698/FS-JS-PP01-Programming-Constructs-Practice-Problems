@@ -70,3 +70,31 @@
     }
 }
 
+//Minimum and maximum from operations
+{
+    const prompt = require('prompt-sync')();
+    let numberOne = prompt("Enter Number One: ");
+    let numberTwo = prompt('Enter Number Two: ');
+    let numberThree = prompt('Enter Number Three: ');
+    let operationOne = numberOne + numberTwo * numberThree;
+    let operationTwo = numberOne % numberTwo + numberThree;
+    let operationThree = numberThree + numberOne / numberTwo;
+    let operationFour = numberOne * numberTwo + numberThree;
+    let minimum = operationOne;
+    let maximum = operationOne;
+    if (operationTwo < minimum) {
+        minimum = operationTwo;
+    } else if (operationThree < minimum) {
+        minimum = operationThree;
+    } else {
+        minimum = operationFour;
+    }
+    if (operationTwo > maximum) {
+        maximum = operationTwo;
+    } else if (operationThree > maximum) {
+        maximum = operationThree;
+    } else {
+        maximum = operationFour;
+    }
+    console.log("Maximum: " + maximum + " Minimum : " + minimum);
+}
