@@ -59,3 +59,25 @@
         console.log('Tail Wins');
     }
 }
+
+//Gambler Winnings Count
+{
+    let moneyWithGambler = 100;
+    const WIN = 1;
+    let numberOfWins = 0;
+    let numberOfBets = 0;
+    while (moneyWithGambler > 0 && moneyWithGambler < 200) {
+        let betOutcome = Math.floor(Math.random() * 10) % 2;
+        if (betOutcome == WIN) {
+            moneyWithGambler++;
+            numberOfWins++;
+        }
+        else {
+            moneyWithGambler--;
+        }
+        numberOfBets++;
+    }
+    console.log("Number of Bets " + numberOfBets);
+    console.log("Number of Wins " + numberOfWins);
+}
+
