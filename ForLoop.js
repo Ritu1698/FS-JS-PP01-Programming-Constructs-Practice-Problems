@@ -34,3 +34,25 @@
     }
     console.log(isPrimeNumber);
 }
+
+//Print Prime numbers in a Given Range
+{
+    const prompt = require('prompt-sync')();
+    let startRange = parseInt(prompt("Start Of Range "));
+    let endRange = parseInt(prompt("End Of Range "));
+    for (let number = startRange; number <= endRange; number++) {
+        let isPrimeNumber = true;
+        if (number == 1 || number == 0) {
+            continue;
+        }
+        for (let index = 2; index <= number / 2; index++) {
+            if (number % index == 0) {
+                isPrimeNumber = false;
+                break;
+            }
+        }
+        if (isPrimeNumber) {
+            console.log(number + "Is Prime");
+        }
+    }
+}
