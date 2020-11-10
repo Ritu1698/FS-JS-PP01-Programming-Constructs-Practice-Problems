@@ -30,5 +30,16 @@
     if (month == 'June' && day <= 20) {
         result = true;
     }
-    console.log("Day in between? " + result);
+    console.log(result);
+}
+
+//Check Leap Year Or Not
+{
+    const prompt = require('prompt-sync')();
+    let year = prompt('Enter a year ');
+    if ((year % 4 == 0) && (year % 100 != 0) || (year % 400 == 0)) {
+        console.log(year + ' is a leap year');
+    } else {
+        console.log(year + ' is not a leap year');
+    }
 }
