@@ -46,3 +46,25 @@
             console.log("Invalid!!!");
     }
 }
+
+//Check Palindromes
+{
+    const prompt = require('prompt-sync')();
+    let numberOne = parseInt(prompt("Enter a number "));
+    let numberTwo = parseInt(prompt("Enter a number "));
+
+    function checkPalindrome(numberOne, numberTwo) {
+        let palindrome = 0;
+        while (numberOne > 0) {
+            palindrome = palindrome * 10 + (numberOne % 10);
+            number1 = Math.floor(numberOne / 10);
+        }
+        return palindrome == numberTwo;
+    }
+
+    if (checkPalindrome(numberOne, numberTwo)) {
+        console.log("Palindromes");
+    } else {
+        console.log("Not Palindromes");
+    }
+}
