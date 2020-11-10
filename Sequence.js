@@ -25,3 +25,16 @@
     }
     console.log("Sum Value: " + sum + " Avg Value: " + sum / 5);
 }
+
+//Unit Conversion
+{
+    const INCH_IN_TERMS_OF_FEET = 1 / 12;
+    const FEET_IN_TERMS_OF_METER = 0.3048;
+    const ACRE_IN_TERMS_OF_SQ_METER = 4046.86;
+    console.log("42 inchs = " + INCH_IN_TERMS_OF_FEET * 42 + " ft");
+    let length = 60;
+    let breadth = 40;
+    let area = length * FEET_IN_TERMS_OF_METER * breadth * FEET_IN_TERMS_OF_METER;
+    console.log("Area in meters square terms: " + area);
+    console.log("Area of 25 such plots in acres: " + 25 * area / ACRE_IN_TERMS_OF_SQ_METER);
+}
