@@ -1,7 +1,7 @@
 //Read a Single Digit Number and Write Number in Word
 {
     const prompt = require('prompt-sync')();
-    let number = prompt('Enter number (between 0 and 9)');
+    let number = prompt('Enter number between 0 and 9');
     if (number == 0) {
         console.log("ZERO");
     } else if (number == 1) {
@@ -24,5 +24,28 @@
         console.log("NINE");
     } else {
         console.log("ERROR! Not a single digit number");
+    }
+}
+
+//Display Weekday
+{
+    const prompt = require('prompt-sync')();
+    let day = prompt('Enter day in number betwwen 1 and 7 ');
+    if (day == 1) {
+        console.log('MONDAY');
+    } else if (day == 2) {
+        console.log("TUESDAY");
+    } else if (day == 3) {
+        console.log("WEDNESDAY");
+    } else if (day == 4) {
+        console.log("THURSDAY");
+    } else if (day == 5) {
+        console.log("FRIDAY");
+    } else if (day == 6) {
+        console.log("SATURDAY");
+    } else if (day == 7) {
+        console.log("SUNDAY");
+    } else {
+        console.log("INVALID!");
     }
 }
