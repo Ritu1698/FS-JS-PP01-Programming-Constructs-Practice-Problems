@@ -49,3 +49,24 @@
         console.log("INVALID!");
     }
 }
+
+//Check unit, tens, hundreds places Of A 10s power Number
+{
+    const prompt = require('prompt-sync')();
+    let number = parseInt(prompt("Enter Number in ten's power : "));
+    let numInWords;
+    if (number == 1) {
+        console.log("Unit")
+    } else if (number == 10) {
+        console.log("Ten");
+    } else if (number == 100) {
+        console.log("Hundred")
+    } else if (number == 1000) {
+        console.log("Thousand")
+    } else if (number == 10000) {
+        console.log("Ten Thousand")
+    } else {
+        console.log("Invalid!!!");
+    }
+}
+
