@@ -67,3 +67,22 @@
     }
     console.log("Factorial is: " + factorial);
 }
+
+//Prime factorization Of Number
+{
+    const prompt = require('prompt-sync')();
+    let number = parseInt(prompt("Enter the number: "));
+    while (number % 2 == 0) {
+        console.log(2);
+        number /= 2;
+    }
+    for (let indexValue = 3; indexValue * indexValue <= number; indexValue += 2) {
+        while (number % indexValue == 0) {
+            console.log(indexValue);
+            number = number / indexValue;
+        }
+    }
+    if (number > 2) {
+        console.log(number);
+    }
+}
