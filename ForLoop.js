@@ -56,3 +56,14 @@
         }
     }
 }
+
+// Primt Factorial Of Number
+{
+    const prompt = require('prompt-sync')();
+    let number = prompt("Enter number ");
+    let factorial = 1;
+    for (indexValue = 2; indexValue <= number; indexValue++) {
+        factorial = factorial * indexValue;
+    }
+    console.log("Factorial is: " + factorial);
+}
