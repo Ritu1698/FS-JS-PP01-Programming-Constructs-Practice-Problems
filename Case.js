@@ -71,3 +71,31 @@
     }
     console.log(day);
 }
+
+//Check unit, tens, hundreds places Of A 10s power Number
+{
+    const prompt = require('prompt-sync')();
+    let number = parseInt(prompt("Enter the number which is Tenth's power"));
+    let numInWords;
+    switch (number) {
+        case 1:
+            numInWords = 'Unit';
+            break;
+        case 10:
+            numInWords = 'Ten';
+            break;
+        case 100:
+            numInWords = 'Hundred';
+            break;
+        case 1000:
+            numInWords = 'Thousand';
+            break;
+        case 10000:
+            numInWords = 'Ten Thousand';
+            break;
+        default:
+            numInWords = 'Improper Input';
+            break;
+    }
+    console.log(numInWords);
+}
