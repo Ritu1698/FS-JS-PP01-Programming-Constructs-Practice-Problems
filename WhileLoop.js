@@ -37,3 +37,25 @@
     }
     console.log("Magic Number " + middle);
 }
+
+//Flip coin With Condition
+{
+    const prompt = require('prompt-sync')();
+    const HEADS = 0;
+    let headsCount = 0;
+    let tailsCount = 0;
+    while (headsCount != 11 && tailsCount != 11) {
+        let coinFlip = Math.floor(Math.random() * 10) % 2;
+        if (coinFlip == HEADS) {
+            headsCount++;
+        }
+        else {
+            tailsCount++;
+        }
+    }
+    if (headsWin == 11) {
+        console.log('Head Wins');
+    } else {
+        console.log('Tail Wins');
+    }
+}
