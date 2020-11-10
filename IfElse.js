@@ -43,3 +43,15 @@
         console.log(year + ' is not a leap year');
     }
 }
+
+//Check Heads Or Tails In Coin flip
+{
+    const HEADS = 0;
+    let coin = Math.floor(Math.random() * 10) % 2;
+    if (coin == HEADS) {
+        console.log("HEADS");
+    }
+    else {
+        console.log("TAILS");
+    }
+}
